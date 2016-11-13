@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/downward" >
+
+        <RelativeLayout
+            android:id="@+id/action_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/action_bar" >
+
+            <ImageButton
+                android:id="@+id/btn_Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/back"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10sp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/search" />
+
+            <TextView
+                android:id="@+id/page_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="Info"
+                android:visibility="gone"
+                android:textSize="@dimen/action_bar_title_text"
+                android:typeface="sans" />
+
+            <ImageView
+                android:id="@+id/category_icon"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/page_Title"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/info_action" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="2sp"
+        android:visibility="gone"
+        android:background="@drawable/menubar" />
+ <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#747474"
+        android:visibility="visible" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/tvwhatsnew"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.33"
+            android:gravity="center"
+            android:text="What&apos;s Hot"
+            android:textColor="@android:color/white"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="#747474"
+            android:visibility="visible" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvpopular"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.33"
+            android:gravity="center"
+            android:text="Popular"
+            android:textColor="@android:color/white"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="#747474"
+            android:visibility="visible" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llllive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.34"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/tvlive"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="Live"
+                android:textColor="@android:color/white"
+                android:textSize="28sp" />
+
+            <ImageView
+                android:id="@+id/ivlive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:src="@drawable/live" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#747474"
+        android:visibility="visible" >
+    </LinearLayout>
+      <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="60dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/btnfblogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/fb" />
+
+            <ImageView
+                android:id="@+id/btnwhatsapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/app" />
+
+            <ImageView
+                android:id="@+id/btnrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rate" />
+
+            <TextView
+                 android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Share with your friends to have a chance to win an exclusive 360 adventure with a celebrity." />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/searchbgbg"
+            android:orientation="vertical" >
+
+            <WebView
+                android:id="@+id/youtube_player"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="5sp"
+                class="com.degree.hitaishin.InfoActivity"
+                android:padding="5dp"
+                android:scrollbars="none" >
+            </WebView>
+
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:gravity="center_horizontal"
+                android:text="www.360mea.com"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:typeface="sans" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5sp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:background="@android:color/black" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/black"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/textInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginRight="20sp"
+                            android:text=""
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginRight="20sp"
+                            android:gravity="center_horizontal"
+                            android:text="www.360mea.com"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:typeface="sans" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+  
+</LinearLayout>

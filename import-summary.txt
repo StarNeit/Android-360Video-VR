@@ -1,0 +1,112 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Risky Project Location:
+-----------------------
+The tools *should* handle project locations in any directory. However,
+due to bugs, placing projects in directories containing spaces in the
+path, or characters like ", ' and &, have had issues. We're working to
+eliminate these bugs, but to save yourself headaches you may want to
+move your project to a location where this is not a problem.
+C:\My Documents\360degree
+     -                   
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From 360degree:
+* .idea\
+* .idea\.name
+* .idea\360degree.iml
+* .idea\compiler.xml
+* .idea\copyright\
+* .idea\copyright\profiles_settings.xml
+* .idea\encodings.xml
+* .idea\misc.xml
+* .idea\modules.xml
+* .idea\vcs.xml
+* .idea\workspace.xml
+* default.properties
+From facebook:
+* build.gradle
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:22.2.1
+android-support-v7-appcompat.jar => com.android.support:appcompat-v7:22.2.1
+
+Replaced Libraries with Dependencies:
+-------------------------------------
+The importer recognized the following library projects as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the source files in your project were of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the library replacement in the import wizard and try
+again:
+
+google-play-services_libOld => [com.google.android.gms:play-services:+]
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In facebook:
+* AndroidManifest.xml => facebook\src\main\AndroidManifest.xml
+* libs\bolts-android-1.1.2.jar => facebook\libs\bolts-android-1.1.2.jar
+* libs\gradle-wrapper.jar => facebook\libs\gradle-wrapper.jar
+* lint.xml => facebook\lint.xml
+* res\ => facebook\src\main\res\
+* src\ => facebook\src\main\java\
+In 360degree:
+* AndroidManifest.xml => _360degree\src\main\AndroidManifest.xml
+* assets\ => _360degree\src\main\assets\
+* libs\android-async-http-1.4.6.jar => _360degree\libs\android-async-http-1.4.6.jar
+* libs\Branch-1.10.2.jar => _360degree\libs\Branch-1.10.2.jar
+* libs\drawee-v0.9.0.jar => _360degree\libs\drawee-v0.9.0.jar
+* libs\fresco-v0.9.0.jar => _360degree\libs\fresco-v0.9.0.jar
+* libs\gcm-src.jar => _360degree\libs\gcm-src.jar
+* libs\groundy-telly-1.0.jar => _360degree\libs\groundy-telly-1.0.jar
+* libs\httpclient-4.0.1.jar => _360degree\libs\httpclient-4.0.1.jar
+* libs\netroid-1.2.1.jar => _360degree\libs\netroid-1.2.1.jar
+* libs\panframe-1.9.jar => _360degree\libs\panframe-1.9.jar
+* libs\picasso-2.5.2.jar => _360degree\libs\picasso-2.5.2.jar
+* libs\signpost-commonshttp4-1.2.1.1.jar => _360degree\libs\signpost-commonshttp4-1.2.1.1.jar
+* libs\signpost-core-1.2.1.1.jar => _360degree\libs\signpost-core-1.2.1.1.jar
+* libs\twitter4j-async-4.0.1.jar => _360degree\libs\twitter4j-async-4.0.1.jar
+* libs\twitter4j-core-4.0.1.jar => _360degree\libs\twitter4j-core-4.0.1.jar
+* libs\twitter4j-examples-4.0.1.jar => _360degree\libs\twitter4j-examples-4.0.1.jar
+* libs\twitter4j-media-support-4.0.1.jar => _360degree\libs\twitter4j-media-support-4.0.1.jar
+* libs\twitter4j-stream-4.0.1.jar => _360degree\libs\twitter4j-stream-4.0.1.jar
+* libs\universal-image-loader-1.9.5.jar => _360degree\libs\universal-image-loader-1.9.5.jar
+* lint.xml => _360degree\lint.xml
+* res\ => _360degree\src\main\res\
+* src\ => _360degree\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

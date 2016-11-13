@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="tabMedium">#000000</color>
+    <color name="tabMedium_old">#2B2B2B</color>
+    <color name="tabDark">#000000</color>
+    <color name="tabTransparent">#1AFFFFFF</color>
+    <color name="action_bar">#020202</color>
+    <color name="header_color">#3B5998</color>
+    <color name="yello">#eea91b</color>
+    <color name="background">#020202</color>
+    <color name="grey">#303030</color>
+    <color name="blue">#2b91b7</color>
+    
+
+</resources>

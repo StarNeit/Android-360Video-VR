@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="spinnerheight">65dip</dimen>
+    <dimen name="downward">55dip</dimen>
+    <dimen name="verticalSpacing">25dip</dimen>
+    <dimen name="gridview_header_title_text">42sp</dimen>
+    
+      <dimen name="action_bar_title_text">19dp</dimen> 
+    <dimen name="video_row_title">25dp</dimen>
+    <dimen name="video_row_super_sub_title">24dp</dimen>
+    <dimen name="video_row_sub_title">24dp</dimen> 
+
+</resources>

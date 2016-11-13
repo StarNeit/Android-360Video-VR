@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spinnerheight">40dip</dimen>
+      <dimen name="downward">50dip</dimen>
+      <dimen name="verticalSpacing">15dip</dimen>
+      <dimen name="gridview_header_title_text">40sp</dimen> 
+      
+    
+</resources>

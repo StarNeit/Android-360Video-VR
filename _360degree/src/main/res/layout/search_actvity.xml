@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/action_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/downward"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/action_bar" >
+
+        <ImageButton
+            android:id="@+id/btn_Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:paddingRight="10sp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/page_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_Back"
+            android:layout_centerHorizontal="true"
+            android:text="@string/search"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"
+            android:typeface="sans" />
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/imageView1"
+            android:layout_width="fill_parent"
+            android:layout_height="1sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="#747474" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/action_layout" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/videoframe" >
+
+                <com.creativeinnovations.mea.NoDefaultSpinner
+                    android:id="@+id/spinnerCategory"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/dropdownbg"
+                    android:drawSelectorOnTop="true"
+                    android:dropDownVerticalOffset="0sp"
+                    android:popupBackground="@color/yello"
+                    android:prompt="@string/select_category"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@android:color/white"
+                    android:typeface="sans" />
+
+                <com.creativeinnovations.mea.NoDefaultSpinner
+                    android:id="@+id/spinnerCity"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/spinnerCategory"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/dropdownbg"
+                    android:popupBackground="@color/yello"
+                    android:prompt="@string/select_city"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@android:color/white"
+                    android:typeface="sans" />
+
+                <com.creativeinnovations.mea.NoDefaultSpinner
+                    android:id="@+id/spinnerDetail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/spinnerCity"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/dropdownbg"
+                    android:popupBackground="@color/background"
+                    android:prompt="@string/select_detail"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@android:color/white"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/keyword_lebal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editKeyword"
+                    android:layout_below="@+id/spinnerDetail"
+                    android:layout_marginTop="25sp"
+                    android:text="@string/keywordlebal"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white"
+                    android:typeface="sans" />
+
+                <EditText
+                    android:id="@+id/editKeyword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/spinnerDetail"
+                    android:layout_alignRight="@+id/spinnerDetail"
+                    android:layout_below="@+id/keyword_lebal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/keywoard"
+                    android:ems="10"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="5sp"
+                    android:paddingRight="5sp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:typeface="sans" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/btnSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/editKeyword"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20sp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/searchbtn"
+                    android:text="@string/search"
+                    android:textColor="@android:color/white"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnSearch"
+                    android:layout_centerHorizontal="true"
+                    android:text="TextView"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

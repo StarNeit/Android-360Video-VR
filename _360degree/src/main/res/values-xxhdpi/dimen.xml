@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spinnerheight">95dip</dimen>
+    <dimen name="downward">85dip</dimen>
+    <dimen name="verticalSpacing">30dip</dimen>
+    
+</resources>

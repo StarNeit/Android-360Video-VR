@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.creativeinnovations.mea"
+    android:versionCode="18"
+    android:versionName="1.18" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="22" />
+
+    <permission
+        android:name="com.creativeinnovations.mea.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.creativeinnovations.mea.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.sensor.gyroscope"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:largeHeap="true"
+        android:theme="@style/app_theme" >
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBlKo1SYAFsg4d-OuEy_DkFx7hz0Nacp_4" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:theme="@style/app_theme" >
+        </activity>
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HomeGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DownloadActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".DownloadGroupActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".SimpleStreamPlayerActivity" >
+        </activity>
+        <!-- // Just for Testing purpose by nik -->
+        <activity
+            android:name=".ContactGroupActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ContactActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="t4jsample"
+                    android:scheme="oauth" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".InfoGroupActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".InfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".VideoListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".VideoPlayerView"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/glass_voice_trigger" />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".LiveStream"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SearchActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".T4JTwitterLoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="twitterlogin"
+                    android:scheme="x-oauthflow-twitter" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".GcmMessageHandler" />
+
+        <receiver
+            android:name="com.hitaishin.notification.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.javapapers.android" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.hitaishin.notification.GCMNotificationIntentService" />
+
+        <activity
+            android:name=".SearchVideoListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".DownloadVideoPlayerView"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/glass_voice_trigger" />
+        </activity>
+        <activity
+            android:name="com.degree.adpater.VideoDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".AwesomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" />
+
+        <service android:name=".DownloaderService" >
+        </service>
+
+        <activity
+            android:name=".VideoDetailDownloadActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".VideoDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".VideoPlayerViewDownload"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/glass_voice_trigger" />
+        </activity>
+        <activity
+            android:name=".VideoPlayerLiveStream"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/glass_voice_trigger" />
+        </activity>
+        <activity
+            android:name=".VideoPlayerViewDirect"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <data android:scheme="market" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+
+            <!--
+                 <meta-data
+                android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/glass_voice_trigger" />
+
+
+
+
+
+            -->
+        </activity>
+
+        <service android:name=".DownloadService" >
+        </service>
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SigninActivity"
+            android:label="@string/title_activity_signin"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:label="@string/title_activity_signin"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".WebViewActivity"
+            android:label="@string/title_activity_signin"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="key_live_hdhGW8bH7L09jJxZUrSkNocgxuiS2y03" />
+    </application>
+
+</manifest>

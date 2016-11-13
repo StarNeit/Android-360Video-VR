@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    useLibrary  'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.creativeinnovations.mea"
+        minSdkVersion 9
+        targetSdkVersion 22
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.google.android.gms:play-services:+'
+
+    compile project(':facebook')
+    compile files('libs/android-async-http-1.4.6.jar')
+    compile files('libs/Branch-1.10.2.jar')
+    compile files('libs/drawee-v0.9.0.jar')
+    compile files('libs/fresco-v0.9.0.jar')
+    compile files('libs/gcm-src.jar')
+    compile files('libs/groundy-telly-1.0.jar')
+    compile files('libs/httpclient-4.0.1.jar')
+    compile files('libs/netroid-1.2.1.jar')
+    compile files('libs/panframe-1.9.jar')
+    compile files('libs/picasso-2.5.2.jar')
+    compile files('libs/signpost-commonshttp4-1.2.1.1.jar')
+    compile files('libs/signpost-core-1.2.1.1.jar')
+    compile files('libs/twitter4j-async-4.0.1.jar')
+    compile files('libs/twitter4j-core-4.0.1.jar')
+    compile files('libs/twitter4j-examples-4.0.1.jar')
+    compile files('libs/twitter4j-media-support-4.0.1.jar')
+    compile files('libs/twitter4j-stream-4.0.1.jar')
+    compile files('libs/universal-image-loader-1.9.5.jar')
+}

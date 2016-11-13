@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.creativeinnovations.mea"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+   <com.degree.hitaishin.UI.CircleImageView
+        android:id="@+id/image"
+        android:layout_width="290sp"
+        android:layout_height="290sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:maxHeight="180dp"
+        android:maxWidth="180dp"
+        android:src="@drawable/ic_launcher"
+        app:border_color="#FFF"
+        app:border_width="1dp" />
+
+</RelativeLayout>
